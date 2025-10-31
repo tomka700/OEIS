@@ -8,7 +8,7 @@
 
 constexpr int n = 9;
 constexpr int k = 8;
-// outfile sizes range for a few KB to hundreds of GB, user discretion is advised
+// outfile sizes range from a few KB to hundreds of GB, user discretion is advised
 constexpr int MAX_LEN = n * k;
 
 unsigned long long count = 0;
@@ -70,3 +70,4 @@ int main() {
     return 0;
 
 }
+
