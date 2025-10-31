@@ -1,4 +1,4 @@
-// g++ -std=c++23 -o3 -march=native -flto A324603.cpp -o A324603
+// g++ -std=c++23 -o3 -march=native -flto A324604.cpp -o A324604
 #include <bitset>
 #include <iostream>
 #include <fstream>
@@ -68,3 +68,4 @@ int main() {
     fout.close();
     return 0;
 }
+
