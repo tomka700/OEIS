@@ -3,7 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <utility>
-#include <format>
 #include <filesystem>
 
 constexpr int n = 9;
@@ -58,8 +57,8 @@ void dfs(int x, int y, int len) {
 int main() {
     std::filesystem::path dir = "out";
     if (!std::filesystem::exists(dir)) std::filesystem::create_directory(dir);
-    std::filesystem::path file = dir / std::format("{}x{}.txt", n, k);
-    fout.open(file);
+    std::filesystem::path file = dir / (std::to_string(n) + "x" + std::to_string(k) + ".txt");
+    fout.open(file, std::ios::out | std::ios::trunc);
     if (!fout.is_open()) return 1;
 
     torus.set(0);
@@ -68,6 +67,4 @@ int main() {
 
     fout.close();
     return 0;
-
 }
-
