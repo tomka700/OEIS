@@ -7,7 +7,7 @@
 
 constexpr int n = 9;
 constexpr int k = 8;
-// outfile sizes range from a few KB to hundreds of GB, user discretion is advised
+// outfile sizes range from a few KB to hundreds of GB, user discretion is advised, replace write calls with ++count to avoid
 constexpr int MAX_LEN = n * k;
 
 unsigned long long count = 0;
@@ -68,4 +68,5 @@ int main() {
     fout.close();
     return 0;
 }
+
 
